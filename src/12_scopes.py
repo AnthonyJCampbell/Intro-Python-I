@@ -30,3 +30,6 @@ def outer():
     print(y)
 
 outer()
+
+# global is used to access the uppermost variables
+# nonlocal to access the nearest enclosing scope (excluding globals). In other words, all layers between the local and global scope.
