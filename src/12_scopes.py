@@ -5,6 +5,7 @@
 x = 12
 
 def changeX():
+    global x 
     x = 99
 
 changeX()
@@ -19,6 +20,7 @@ def outer():
     y = 120
 
     def inner():
+        nonlocal y
         y = 999
 
     inner()
@@ -28,3 +30,6 @@ def outer():
     print(y)
 
 outer()
+
+# global is used to access the uppermost variables
+# nonlocal to access the nearest enclosing scope (excluding globals). In other words, all layers between the local and global scope.
